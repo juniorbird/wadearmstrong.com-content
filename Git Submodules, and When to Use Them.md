@@ -2,7 +2,6 @@
 title: Git Submodules, and When to Use Them
 description: A description
 layout: layouts/base.njk
-draft: true
 date: 2023-07-11
 tags:
   - posts
