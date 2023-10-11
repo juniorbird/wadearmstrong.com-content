@@ -18,7 +18,7 @@ Anyway, I wanted to use Workspaces to automatically switch my default browser _a
 
 My first idea was to try to [`defaults set`](https://macos-defaults.com/) something, but it turns out that's not how MacOS stores your Web browser. There _is_ a API to set it, but I'm no ace with Swift[^4] so I didn't want to deal with that.
 
-Turns out you can just `[brew install](https://brew.sh/)``[defaultbrowser](https://github.com/kerma/defaultbrowser)` and get a nifty command-line utility that will tell you the browsers you have; and help you switch. 
+Turns out you can just [`brew install`](https://brew.sh/)[`defaultbrowser`](https://github.com/kerma/defaultbrowser) and get a nifty command-line utility that will tell you the browsers you have; and help you switch. 
 
 However, MacOS — for good and desirable security reasons! — will pop a dialog asking you if you really want to switch your browser. That's unnecessary, since this is a user-initiated change. So, I reached for AppleScript to auto-press ok in the dialog for me. But I don't write AppleScript all that often,[^5] so of course I had to google button pushing.
 
