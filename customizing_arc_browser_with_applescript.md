@@ -1,6 +1,6 @@
 ---
 title: Customizing the Arc Web Browser Using Workspaces and AppleScript
-description: So you want to have a customizable site that takes the least effort possible and is free to host... here's how to publish your 11ty site on GitHub Pages!
+description: I've recently gotten really into the Arc Web browser and how its Spaces help me organize my work; here's how to use AppleScript and the Workflows app to get the Arc Space you need for the project you're working on, with code.
 date: 2023-10-11
 layout: layouts/base.njk
 tags:
@@ -8,11 +8,11 @@ tags:
 ---
 # Customizing the Arc Web Browser Using Workspaces and AppleScript
 
-I've recently gotten really into the [Arc Web browser](https://arc.net/), and in particular how its [Spaces](https://resources.arc.net/en/articles/6318861-spaces-distinct-browsing-areas) help me organize my work[^1] But, I also like the amazing battery life Safari gives me,[^2] plus some of its other clever features.[^3]
+I like to tweak my work setup based on the task I'm focused on, so that I have the tools and info I need at my fingertips, while reducing distraction (and potentially freeing up memory to open demanding apps). To do this, I rely on [Workspaces](https://www.apptorium.com/workspaces), a nifty launcher that opens the apps and Web sites I need for different kinds of works — and closes the things that will distract me (or just take up memory, _cough_, Docker). I got Workspaces with my [Setapp](https://www.apptorium.com/workspaces) subscription, so you may prefer another tool, but I recommend it if you're looking for something.
 
-I also have come to rely on [Workspaces](https://www.apptorium.com/workspaces), a nifty launcher that opens the apps and Web sites I need for different kinds of works — and closes the things that will distract me (or just take up memory, _cough_, Docker). I got Workspaces with my [Setapp](https://www.apptorium.com/workspaces) subscription, so you may prefer another tool, but I recommend it if you're looking for something.
+I've also recently gotten really into the [Arc Web browser](https://arc.net/), and in particular how its [Spaces](https://resources.arc.net/en/articles/6318861-spaces-distinct-browsing-areas) help me organize my work.[^1] But, I also like the amazing battery life Safari gives me,[^2] plus some of its other clever features that make a difference in home tasks.[^3] 
 
-Anyway, I wanted to use Workspaces to automatically switch my default browser _and_, if I was using Arc, switch to the Space I wanted.
+I use Arc for work/projects and Safari for home. I wanted to use Workspaces to automatically switch my default browser _and_, if I was using Arc, switch to the Space I wanted.
 
 ## Switching Default Browsers
 
@@ -82,7 +82,7 @@ try
 end try
 ```
 
-`delay 1` just means "wait for the browser to be launched, please." I tell the `last window` because, if *no* window is focused, there's no `first window`, and Arc will open a new window; I assume here that the user's last window is likely to be the one they care about.
+`delay 1` just means "wait for the browser to be launched, please." I tell the `last window` because, if *no* window is focused, there's no `first window`, and Arc will open a new window; I assume here that the user's last window is likely to be the one the user has most recently used, so it's probably the most relevant to them.
 
 I do have to say I really appreciate that Arc's API supports named Spaces without me having to look up some other identifier for the Space. Makes it easy to switch to the space "Writing Code"! Technically this also works if the user passes in the number of the Space, but I'd personally rather use a name than a number.
 
